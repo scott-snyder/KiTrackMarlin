@@ -129,3 +129,5 @@ DISPLAY_STD_VARIABLES()
 
 # generate and install following configuration files
 GENERATE_PACKAGE_CONFIGURATION_FILES( KiTrackMarlinConfig.cmake KiTrackMarlinConfigVersion.cmake )
+
+INSTALL (FILES ${PROJECT_SOURCE_DIR}/cmake/KiTrackMarlinLibDeps.cmake DESTINATION lib/cmake )
