@@ -80,7 +80,7 @@ int SectorSystemVXD::getSector( int layer , int phi , int theta ) const {
   
   //std::cout << "getting sector : layer " << layer << " phi " << phi << " theta " << theta << std::endl ;
 
-  if ( layer >= _nLayers ){
+  if ( layer >= static_cast<int>(_nLayers) ){
     
     std::stringstream s; 
     s << "Layer " << layer << " is too big, the outermost layer is layer " << _nLayers - 1 ;
@@ -89,7 +89,7 @@ int SectorSystemVXD::getSector( int layer , int phi , int theta ) const {
   }
 
   
-  if ( phi >= _nDivisionsInPhi ){
+  if ( phi >= static_cast<int>(_nDivisionsInPhi) ){
     
     std::stringstream s; 
     s << "Phi " << phi << " is too big, the highest phi division is " << _nDivisionsInPhi ;
@@ -99,7 +99,7 @@ int SectorSystemVXD::getSector( int layer , int phi , int theta ) const {
 
 
   
-  if ( theta >= _nDivisionsInTheta ){
+  if ( theta >= static_cast<int>(_nDivisionsInTheta) ){
     
     std::stringstream s;
     s << "Theta " << theta << " is too big, the highest theta division is " << _nDivisionsInTheta ;
@@ -126,7 +126,7 @@ int SectorSystemVXD::getSector( int layer , double phi , double cosTheta ) const
 
   //std::cout << "getting sector : layer " << layer << " phi " << iPhi << " theta " << iTheta << std::endl ;
 
-  if ( layer >= _nLayers ){
+  if ( layer >= static_cast<int>(_nLayers) ){
     
     std::stringstream s; 
     s << "Layer " << layer << " is too big, the outermost layer is layer " << _nLayers - 1 ;
@@ -135,7 +135,7 @@ int SectorSystemVXD::getSector( int layer , double phi , double cosTheta ) const
   }
 
   
-  if ( iPhi >= _nDivisionsInPhi ){
+  if ( iPhi >= static_cast<int>(_nDivisionsInPhi) ){
     
     std::stringstream s; 
     s << "Phi " << iPhi << " is too big, the highest phi division is " << _nDivisionsInPhi ;
@@ -145,7 +145,7 @@ int SectorSystemVXD::getSector( int layer , double phi , double cosTheta ) const
 
 
   
-  if ( iTheta >= _nDivisionsInTheta ){
+  if ( iTheta >= static_cast<int>(_nDivisionsInTheta) ){
     
     std::stringstream s;
     s << "Theta " << iTheta << " is too big, the highest theta division is " << _nDivisionsInTheta ;
