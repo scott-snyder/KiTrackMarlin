@@ -43,7 +43,7 @@ std::set< int > VXDSectorConnector::getTargetSectors ( int sector ){
    int iTheta_Up  = iTheta + _neighTheta; 
    int iTheta_Low = iTheta - _neighTheta;
    if (iTheta_Low < 0) iTheta_Low = 0;
-   if (iTheta_Up  >= _nDivisionsInTheta) iTheta_Up = _nDivisionsInTheta-1;
+   if (iTheta_Up  >= static_cast<int>(_nDivisionsInTheta)) iTheta_Up = _nDivisionsInTheta-1;
    
    //*************************************************************************************
 
@@ -51,23 +51,23 @@ std::set< int > VXDSectorConnector::getTargetSectors ( int sector ){
    
    for( unsigned layerStep = 1; layerStep <= _layerStepMax; layerStep++ ){
      
-     if ( layer >= layerStep ){ // +1 makes sense if I use IP as innermost layer
+     if ( layer >= static_cast<int>(layerStep) ){ // +1 makes sense if I use IP as innermost layer
        
        unsigned layerTarget = layer - layerStep;
 
-        if (layerTarget >= 0 && layerTarget < _layerMax ){   // just a test to run cellular automaton over the whole VXD - SIT
+         if (static_cast<int>(layerTarget) < _layerMax ){   // just a test to run cellular automaton over the whole VXD - SIT
 	 
-	 for (int iPhi = iPhi_Low ; iPhi <= iPhi_Up ; iPhi++){
+	 for (int iPhi2 = iPhi_Low ; iPhi2 <= iPhi_Up ; iPhi2++){
 
-	   int ip = iPhi;
+	   int ip = iPhi2;
 	   
 	   // catch wrap-around
 	   if (ip < 0) ip = _nDivisionsInPhi-1;          
-	   if (ip >= _nDivisionsInPhi) ip = ip - _nDivisionsInPhi;
+	   if (ip >= static_cast<int>(_nDivisionsInPhi)) ip = ip - _nDivisionsInPhi;
 	   
-	   for (int iTheta = iTheta_Low ; iTheta <= iTheta_Up ; iTheta++){
+	   for (int iTheta2 = iTheta_Low ; iTheta2 <= iTheta_Up ; iTheta2++){
 	     
-	     targetSectors.insert( _sectorSystemVXD->getSector ( layerTarget , ip , iTheta ) ); 
+	     targetSectors.insert( _sectorSystemVXD->getSector ( layerTarget , ip , iTheta2 ) ); 
 	     
 	   }
 	 }
@@ -76,13 +76,13 @@ std::set< int > VXDSectorConnector::getTargetSectors ( int sector ){
    }
    
 
-   if ( layer > 0 && ( layer <= _lastLayerToIP ) ){
+   if ( layer > 0 && ( layer <= static_cast<int>(_lastLayerToIP) ) ){
       
      unsigned layerTarget = 0;
       
      for (int ip = iPhi_Low ; ip <= iPhi_Up ; ip++){
        
-       for (int iTheta = iTheta_Low ; iTheta <= iTheta_Up ; iTheta++){
+       for (int iTheta2 = iTheta_Low ; iTheta2 <= iTheta_Up ; iTheta2++){
 	 
 	 streamlog_out(DEBUG1) << " VXDSectorConnector: from layer " << layer << " to layer " << layerTarget << std::endl ;
 	 

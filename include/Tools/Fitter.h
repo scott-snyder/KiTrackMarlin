@@ -122,8 +122,8 @@ private:
    
    // No copy constructor or assignment needed so far. so private for safety
    // If they are needed, they need to be implemented in a clean way first!
-   Fitter( const Fitter& f ){};
-   Fitter& operator= ( Fitter const& f ){return *this;}
+   Fitter( const Fitter& f ) = delete;
+   Fitter& operator= ( Fitter const& f ) = delete;
    
 };
 
