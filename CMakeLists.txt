@@ -125,4 +125,6 @@ INCLUDE_DIRECTORIES( ${ILCTEST_INCLUDE_DIRS} )
 DISPLAY_STD_VARIABLES()
 
 # generate and install following configuration files
-GENERATE_PACKAGE_CONFIGURATION_FILES( KiTrackMarlinConfig.cmake KiTrackMarlinConfigVersion.cmake KiTrackMarlinLibDeps.cmake )
+GENERATE_PACKAGE_CONFIGURATION_FILES( KiTrackMarlinConfig.cmake KiTrackMarlinConfigVersion.cmake  )
+
+INSTALL (FILES ${PROJECT_SOURCE_DIR}/cmake/KiTrackMarlinLibDeps.cmake DESTINATION lib/cmake )
