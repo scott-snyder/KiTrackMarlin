@@ -1,9 +1,15 @@
 {
   "version": 5,
-  "prev": null,
-  "head": "c1142d8d7beb6dceb7c540c3917c9e6a2483e3f7",
-  "applied": [],
+  "prev": "1c7615e894ddbeb8d92b2642fc3aec91cfc655a4",
+  "head": "99c8c943704ebd527913f81d5075bd49051d1362",
+  "applied": [
+    "gitignore"
+  ],
   "unapplied": [],
   "hidden": [],
-  "patches": {}
+  "patches": {
+    "gitignore": {
+      "oid": "99c8c943704ebd527913f81d5075bd49051d1362"
+    }
+  }
 }
