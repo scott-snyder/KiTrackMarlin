@@ -47,14 +47,14 @@ namespace KiTrackMarlin{
        * 
        * @return the layer corresponding to the passed sector number
        */
-      virtual unsigned getLayer( int sector ) const ;
+      virtual unsigned getLayer( int sector ) const override;
       
       virtual unsigned getPhi( int sector ) const ;
 
       virtual unsigned getTheta( int sector ) const ;
 
       /** @return some information on the sector as string */
-      virtual std::string getInfoOnSector( int sector) const;
+      virtual std::string getInfoOnSector( int sector) const override;
 
 
       /** Calculates the sector number corresponding to the passed parameters
