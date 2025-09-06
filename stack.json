@@ -1,12 +1,13 @@
 {
   "version": 5,
-  "prev": "a0efc136bc65a7522aabe8e4e6d17bb50ecdb883",
-  "head": "e2521ddde6a73440a1985123f6daae177ff87197",
+  "prev": "40adf7ffb147c5f1a5d8d5113e5b9bfea74be5cb",
+  "head": "c22b48bcfff3a069387c9bb12a2b401668b555c2",
   "applied": [
     "gitignore",
     "LibDeps",
     "cmakewarn",
-    "nosystem"
+    "nosystem",
+    "warn"
   ],
   "unapplied": [],
   "hidden": [],
@@ -22,6 +23,9 @@
     },
     "nosystem": {
       "oid": "e2521ddde6a73440a1985123f6daae177ff87197"
+    },
+    "warn": {
+      "oid": "c22b48bcfff3a069387c9bb12a2b401668b555c2"
     }
   }
 }
