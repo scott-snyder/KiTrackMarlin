@@ -29,10 +29,6 @@ namespace KiTrackMarlin{
 
    private:
       
-      int _layer;
-      int _phi;
-      int _theta;
-      
       const SectorSystemVXD* _sectorSystemVXD;
       
       //void calculateSector(){ _sector = _sectorSystemVXD->getSector( _side, _layer , _module , _sensor ); }

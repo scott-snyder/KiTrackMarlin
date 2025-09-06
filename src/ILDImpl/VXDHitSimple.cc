@@ -4,7 +4,7 @@
 using namespace KiTrackMarlin;
 
 VXDHitSimple::VXDHitSimple( float x , float y , float z , int layer , int phi, int theta, const SectorSystemVXD* const sectorSystemVXD ) :
-   _layer(layer), _phi(phi), _theta(theta), _sectorSystemVXD(sectorSystemVXD)
+   _sectorSystemVXD(sectorSystemVXD)
 {
    _x = x;
    _y = y; 
