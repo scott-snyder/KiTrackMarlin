@@ -26,7 +26,7 @@ namespace KiTrackMarlin{
        */
       FTDNeighborPetalSecCon ( const SectorSystemFTD* sectorSystemFTD );
       
-      virtual std::set <int>  getTargetSectors ( int sector );
+      virtual std::set <int>  getTargetSectors ( int sector ) override;
       
       FTDNeighborPetalSecCon(const FTDNeighborPetalSecCon&) = default;
       FTDNeighborPetalSecCon& operator=(const FTDNeighborPetalSecCon&) = default;
