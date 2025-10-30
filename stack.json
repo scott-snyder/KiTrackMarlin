@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "prev": "88aec24a1c679fa48e91a998582ea83b9488f682",
-  "head": "83f7250891ea7745e5089d9ef8c1071e4959c52f",
+  "prev": "6d115ca35a4d94227e8359996325bfca2b77602f",
+  "head": "2f0130329a57aed611a456a9c6fa67f12430bbc8",
   "applied": [
     "gitignore",
     "LibDeps",
@@ -16,16 +16,16 @@
       "oid": "c47553b1679d4a068e208c663005bca84ecfe6ef"
     },
     "cmakewarn": {
-      "oid": "9c8bcb47eaeb19657a8b43ccf1ee9b3fe854588c"
+      "oid": "152c3da0f1bcc7c14d637ef95f5835a79578c8b6"
     },
     "gitignore": {
       "oid": "5d2d4d1f7d4db4f3e3d8bd699d2aa119063eeaa7"
     },
     "nosystem": {
-      "oid": "e2521ddde6a73440a1985123f6daae177ff87197"
+      "oid": "f74eae6f66710be7ba27e29716cf4da2f86c5ae9"
     },
     "warn": {
-      "oid": "83f7250891ea7745e5089d9ef8c1071e4959c52f"
+      "oid": "2f0130329a57aed611a456a9c6fa67f12430bbc8"
     }
   }
 }
